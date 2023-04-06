@@ -1,0 +1,12 @@
+<!-- Users Sections -->
+<section style="display: flex;">
+    <div class="card m-3" style="width:300px" *ngFor="let user of UsersList">
+        <div class="card-body">
+            <h4 class="card-title">{{user?.name}}</h4>
+            <p class="card-text">@{{user?.username}}</p>
+            <a href="#" class="card-link">{{user?.email}}</a>
+        </div>
+      </div>
+</section>
+
+<!-- End Users Sections -->

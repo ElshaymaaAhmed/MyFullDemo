@@ -1,0 +1,11 @@
+<!-- Posts Sections -->
+<section style="display: flex;">
+    <div class="card m-3" style="width:300px" *ngFor="let post of PostsList">
+        <div class="card-header">{{post?.title}}</div>
+        <div class="card-body">{{post?.body}}</div>
+        <div class="card-footer">
+            <button class="btn btn-primary" (click)="GetAllPostComments(post?.id)">See Comments</button>
+        </div>
+      </div>
+</section>
+<!-- End Posts Sections -->

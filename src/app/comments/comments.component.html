@@ -1,0 +1,12 @@
+<!-- Comments Sections -->
+<section style="display: flex;">
+    <div class="card m-3" style="width:300px" *ngFor="let comment of CommentsList">
+        <div class="card-body">
+            <h4 class="card-title">{{comment?.name}}</h4>
+            <a href="#" class="card-link">{{comment?.email}}</a>
+            <p class="card-text">{{comment?.body}}</p>          
+        </div>
+      </div>
+</section>
+
+<!-- End Comments Sections -->

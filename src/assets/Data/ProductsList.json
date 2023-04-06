@@ -1,0 +1,30 @@
+[
+    {
+      "ID": 1,
+      "Name": "HP",
+      "Quantity": 3,
+      "Price": 100,
+      "Img": "../../assets/imgs/featured1.png"
+    },
+    {
+      "ID": 2,
+      "Name": "Dell",
+      "Quantity": 5,
+      "Price": 200,
+      "Img": "../../assets/imgs/featured2.png"
+    },
+    {
+      "ID": 3,
+      "Name": "Samsung",
+      "Quantity": 7,
+      "Price": 300,
+      "Img": "../../assets/imgs/featured3.png"
+    },
+    {
+      "ID": 4,
+      "Name": "Lenovo",
+      "Quantity": 9,
+      "Price": 500,
+      "Img": "../../assets/imgs/featured4.png"
+    }
+]

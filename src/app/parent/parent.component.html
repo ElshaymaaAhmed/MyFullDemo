@@ -1,0 +1,24 @@
+<p>parent works!</p>
+<button id="btn" (click)="ShowData()">Get Data</button>
+
+<app-child (childEvent)="ProductList = $event"></app-child>
+
+<table *ngIf="getData">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>image</th>
+    </tr>
+    <tr *ngFor="let product of ProductList">
+        <td>{{product.ID}}</td>
+        <td>{{product?.Name}}</td>
+        <td>{{product.Quantity}}</td>
+        <td>{{product.Price}}</td>
+        <td><img [src]="product.Img" style="width:40px;"></td>
+    </tr>
+</table>
+
+
+

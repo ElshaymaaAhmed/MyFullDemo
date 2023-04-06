@@ -1,0 +1,54 @@
+<div class="container">
+    <form  #userForm="ngForm" novalidate (ngSubmit)="submitData()">
+        <!-- {{userForm.value |json}} -->
+        <br>
+        <!-- {{userModel|json}} -->
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" required [class.is-invalid]="name.invalid&&name.touched"  [(ngModel)]="userModel.username" name="txtName" #name="ngModel" class="form-control"> 
+            <small class="text-danger" *ngIf="name.invalid&&name.touched">User name is required</small>
+        </div>
+        <!-- pattern="[a-zA-z]" -->
+        
+        <div class="from-group">
+            <label>Email</label>
+            <input type="email" required name="txtEmail" [(ngModel)]="userModel.email" #email="ngModel" class="form-control">
+            <small class="text-danger" *ngIf="email.invalid&&email.touched">Email is required</small>
+        </div>
+        <!-- pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/"  -->
+
+        <div class="forrm-group">
+            <label>Password</label>
+            <input type="password" required name="password" [class.is-invalid]="password.invalid&&password.touched" pattern="^\d{11}$" [(ngModel)]="userModel.password" #password="ngModel"  class="form-control">
+            <div *ngIf="password.errors&&password.touched">
+                <small class="text-danger" *ngIf="password.errors['required']">Password is required</small>
+                <small class="text-danger" *ngIf="password.errors['pattern']">Password must be 11 digits</small>
+            </div>
+        </div>
+
+        <div class="forrm-group">
+            <label>Confirm Password</label>
+            <input type="password" required name="ConfPass" [class.is-invalid]="ConfPass.invalid&&ConfPass.touched" pattern="^\d{11}$" [(ngModel)]="userModel.confirmPassword" #ConfPass="ngModel"  class="form-control">
+            <div *ngIf="ConfPass.errors&&ConfPass.touched">
+                <small class="text-danger" *ngIf="ConfPass.errors['required']">Password is required</small>
+                <small class="text-danger" *ngIf="ConfPass.errors['pattern']">Password must be 11 digits</small>
+            </div>
+        </div>
+<br>
+        <div class="from-group">
+            <label selected>
+                where you hear about us 
+            </label>
+            <select class="custom-select" [(ngModel)]="userModel.media" name="media" #media="ngModel" class="form-control">
+              
+                <option *ngFor="let media of SocialMedia">
+                    {{media}}
+                </option>
+            </select>
+        </div>
+        <br>
+       
+        <input type="submit" [disabled]="userForm.form.invalid" class="btn btn-primary" value="submit">
+
+    </form>
+</div>

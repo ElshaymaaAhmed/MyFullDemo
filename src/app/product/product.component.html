@@ -1,0 +1,41 @@
+<body style="width:100%;">
+
+<h1>{{StoreName | uppercase}}</h1>
+<h4>{{ClientName}}</h4>
+
+<!-- <img [src]="ProductList[0].Img" alt="logo" style="width:40px;"> -->
+<br>
+<h3 *ngIf="discount_Offers != 'No Discount'">We offer an explicit discount of {{Discount | percent}}</h3>
+<br>
+<select name="categories" id="categories">
+    <option *ngFor="let category of CategoryList" value="{{category.ID}}">
+        {{category.Name}}
+    </option>
+</select>
+<br>
+<br>
+<!-- Products Sections -->
+<section *ngIf="showTable" style="display: flex;">
+    <div class="card m-3" style="width:300px" *ngFor="let product of ProductList">
+        <img class="card-img-top" [src]="product.Img" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{product?.Name}} <small class="text-success" style="float: right;">${{product.Price}}</small></h4>
+          <p class="card-text">Quantity: {{product.Quantity}}</p>
+          <a href="#" class="btn btn-primary">More Details</a>
+        </div>
+      </div>
+</section>
+
+<!-- End Products Sections -->
+
+<div *ngIf="IsPurshased">
+    <h5>Thanks for purchasing from our Store {{ClientName}}</h5>
+</div>
+
+<br>
+<input type="text" [(ngModel)]="ClientName" />
+<br><br>
+
+<button id="btn" (click)="hideTable()">{{status}}</button>
+</body>
+
