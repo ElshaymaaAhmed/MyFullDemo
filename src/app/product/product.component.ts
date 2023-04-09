@@ -3,6 +3,7 @@ import { DiscountOffers } from '../SharedClasses/Interfaces';
 import { IProduct } from '../SharedClasses/Interfaces';
 import { ICategory } from '../SharedClasses/Interfaces';
 import { ProductServiceService } from '../services/product-service.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -11,7 +12,7 @@ import { ProductServiceService } from '../services/product-service.service';
 })
 export class ProductComponent{ 
 
-  constructor(private productService:ProductServiceService) {}
+  constructor(private productService:ProductServiceService, private router:Router, private activeroute:ActivatedRoute) {}
 
   Discount:DiscountOffers = DiscountOffers['10%']; // 'No Discount'
   StoreName:string = "Electronica Store";
@@ -66,4 +67,12 @@ export class ProductComponent{
     });
     
   }
+
+  // WithDiscount(){
+  //   this.router.navigate(['discount'],{relativeTo:this.activeroute})     
+  // }
+
+  // WithoutDiscount(){ 
+  //   this.router.navigate(['nodiscount'],{relativeTo:this.activeroute}) 
+  // }
 }

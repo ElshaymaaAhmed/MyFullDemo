@@ -4,6 +4,9 @@ export interface IProduct {
     Quantity: number;
     Price: number;
     Img: string;
+    Discount: DiscountOffers,
+	IsDiscount:boolean,
+    IsPurchased:boolean
 }
 
 export interface ICategory {
@@ -44,6 +47,6 @@ export interface IUser {
 };
 export enum DiscountOffers {
     "No Discount",
-    "10%",
-    "15%"
+    "10%" = 0.1,
+    "15%" = 0.15
 }

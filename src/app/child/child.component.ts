@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { IProduct } from '../SharedClasses/Interfaces';
+import { DiscountOffers, IProduct } from '../SharedClasses/Interfaces';
 
 @Component({
   selector: 'app-child',
@@ -17,28 +17,40 @@ export class ChildComponent {
       Name: "HP",
       Quantity: 3,
       Price: 100,
-      Img: "../../assets/imgs/unnamed (4).png"
+      Img: "../../assets/imgs/unnamed (4).png",
+      Discount: DiscountOffers['No Discount'],
+	    IsDiscount:true,
+      IsPurchased:false
     },
     {
       ID: 2,
       Name: "Dell",
       Quantity: 5,
       Price: 200,
-      Img: "../../assets/imgs/unnamed (7).png"
+      Img: "../../assets/imgs/unnamed (7).png",
+      Discount: DiscountOffers['No Discount'],
+	    IsDiscount:true,
+      IsPurchased:false
     },
     {
       ID: 3,
       Name: "Samsung",
       Quantity: 7,
       Price: 300,
-      Img: "../../assets/imgs/unnamed (16).png"
+      Img: "../../assets/imgs/unnamed (16).png",
+      Discount: DiscountOffers['15%'],
+	    IsDiscount:true,
+      IsPurchased:false
     },
     {
       ID: 4,
       Name: "Lenovo",
       Quantity: 9,
       Price: 500,
-      Img: "../../assets/imgs/unnamed (17).png"
+      Img: "../../assets/imgs/unnamed (17).png",
+      Discount: DiscountOffers['10%'],
+	    IsDiscount:true,
+      IsPurchased:false 
     }
 ];
 

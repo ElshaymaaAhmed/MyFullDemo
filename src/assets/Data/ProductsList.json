@@ -4,27 +4,39 @@
       "Name": "HP",
       "Quantity": 3,
       "Price": 100,
-      "Img": "../../assets/imgs/featured1.png"
+      "Img": "../../assets/imgs/featured1.png",
+      "Discount": "DiscountOffers['No Discount']",
+	    "IsDiscount":true,
+      "IsPurchased":false
     },
     {
       "ID": 2,
       "Name": "Dell",
       "Quantity": 5,
       "Price": 200,
-      "Img": "../../assets/imgs/featured2.png"
+      "Img": "../../assets/imgs/featured2.png",
+      "Discount": "DiscountOffers['No Discount']",
+	    "IsDiscount":true,
+      "IsPurchased":false
     },
     {
       "ID": 3,
       "Name": "Samsung",
       "Quantity": 7,
       "Price": 300,
-      "Img": "../../assets/imgs/featured3.png"
+      "Img": "../../assets/imgs/featured3.png",
+      "Discount": "DiscountOffers['15%']",
+	    "IsDiscount":true,
+      "IsPurchased":false
     },
     {
       "ID": 4,
       "Name": "Lenovo",
       "Quantity": 9,
       "Price": 500,
-      "Img": "../../assets/imgs/featured4.png"
+      "Img": "../../assets/imgs/featured4.png",
+      "Discount": "DiscountOffers['10%']",
+	    "IsDiscount":true,
+      "IsPurchased":false
     }
 ]

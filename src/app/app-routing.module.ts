@@ -6,19 +6,25 @@ import { PostsComponent } from './posts/posts.component';
 import { UsersComponent } from './users/users.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CommentsComponent } from './comments/comments.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './TDF/login/login.component';
+import { RegisterComponent } from './TDF/register/register.component';
+import { RegisterRFComponent } from './ReactiveForms/register-rf/register-rf.component';
+import { LoginRFComponent } from './ReactiveForms/login-rf/login-rf.component';
+import { DiscountComponent } from './discount/discount.component';
+import { NoDiscountComponent } from './no-discount/no-discount.component';
 
 const routes: Routes = 
 [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
-  {path:'products',component:ProductComponent},
+  {path:'products',component:ProductComponent,children:[
+    {path:'discount',component:DiscountComponent},
+    {path:'nodiscount',component:NoDiscountComponent}]},
   {path:'posts',component:PostsComponent},
   {path:'users',component:UsersComponent},
   {path:'posts/:id',component:CommentsComponent},
-  {path:'login',component:LoginComponent}, 
-  {path:'register',component:RegisterComponent}, 
+  {path:'login',component:LoginRFComponent}, // LoginComponent
+  {path:'register',component:RegisterRFComponent}, //RegisterComponent 
   {path:'**',component:PageNotFoundComponent}
 ];
 
