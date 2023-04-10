@@ -20,6 +20,5 @@ app.listen(PORT,function(){
 
 app.post('/enroll',function(req,res){
     console.log(req.body);
-    //calling mongo db
     res.status(200).send({"data":"Recived successfully"});
 })

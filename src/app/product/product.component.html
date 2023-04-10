@@ -3,7 +3,6 @@
 <h1>{{StoreName | uppercase}}</h1>
 <h4>{{ClientName}}</h4>
 
-<!-- <img [src]="ProductList[0].Img" alt="logo" style="width:40px;"> -->
 <br>
 <h3 *ngIf="discount_Offers != 'No Discount'">We offer an explicit discount of {{Discount | percent}}</h3>
 <br>
@@ -39,8 +38,6 @@
 <button id="btn" (click)="hideTable()">{{status}}</button><br><br>
 
 <div class="ms-5 mt-5 mb-5 d-flex justify-content-center" >
-    <!-- <button class="btn btn-primary mr-5" (click)="WithDiscount()" >Discount</button>
-    <button class="btn btn-primary ms-5" (click)="WithoutDiscount()">No discounts</button> -->
     <a class="btn btn-primary mr-5" routerLink="/products/discount">Products with Discount</a>
     <a class="btn btn-primary mr-5" routerLink="/products/nodiscount">Products without Discount</a>
 </div>

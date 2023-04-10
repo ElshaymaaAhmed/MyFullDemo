@@ -12,6 +12,7 @@ import { RegisterRFComponent } from './ReactiveForms/register-rf/register-rf.com
 import { LoginRFComponent } from './ReactiveForms/login-rf/login-rf.component';
 import { DiscountComponent } from './discount/discount.component';
 import { NoDiscountComponent } from './no-discount/no-discount.component';
+import { NotesComponent } from './notes/notes.component';
 
 const routes: Routes = 
 [
@@ -22,6 +23,7 @@ const routes: Routes =
     {path:'nodiscount',component:NoDiscountComponent}]},
   {path:'posts',component:PostsComponent},
   {path:'users',component:UsersComponent},
+  {path:'notes',component:NotesComponent},
   {path:'posts/:id',component:CommentsComponent},
   {path:'login',component:LoginRFComponent}, // LoginComponent
   {path:'register',component:RegisterRFComponent}, //RegisterComponent 

@@ -23,6 +23,7 @@ import { LoginRFComponent } from './ReactiveForms/login-rf/login-rf.component';
 import { RegisterRFComponent } from './ReactiveForms/register-rf/register-rf.component';
 import { DiscountComponent } from './discount/discount.component';
 import { NoDiscountComponent } from './no-discount/no-discount.component';
+import { NotesComponent } from './notes/notes.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { NoDiscountComponent } from './no-discount/no-discount.component';
     LoginRFComponent,
     RegisterRFComponent,
     DiscountComponent,
-    NoDiscountComponent
+    NoDiscountComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,
